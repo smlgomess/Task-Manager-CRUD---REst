@@ -19,11 +19,11 @@ module Api
                 if @tasks.save
                     render json: {status: 'SUCCESS', message: 'tarefa criada', data:@tasks },
                     status: :ok
-                    redirect_to @tasks, notice: 'Tarefa criada com sucesso!'
+                    
                 else
                     render json: {status: 'ERROR', message: 'tarefa não foi criada',
                         data:@tasks.errors}, status: :unprocessable_entity
-                    render action: :new
+                    
                 end
             end
 
@@ -32,10 +32,7 @@ module Api
                 @tasks.destroy
                 render json: {status: 'SUCCESS', message: 'tarefa apagada', data:@tasks },
                 status: :ok
-                respond_to do |format|
-                    format.html { redirect_to tasks_url, notice: 
-                    "Tarefa removida com sucesso!." } 
-                end
+                
             end
 
             def update 
@@ -43,11 +40,11 @@ module Api
                 if @tasks.update(tasks_params)
                     render json: {status: 'SUCCESS', message: 'tarefa atualizada', data:@tasks },
                     status: :ok
-                    redirect_to @tasks, notice: 'Tarefa atualizada com sucesso!'
+                   
                 else
                     render json: {status: 'ERROR', message: 'tarefa não foi atualizada',
                         data:@tasks.errors}, status: :unprocessable_entity
-                    render action: :edit
+                    
                 end
             end
 
