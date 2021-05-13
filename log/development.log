@@ -1,0 +1,777 @@
+Started GET "/" for ::1 at 2021-05-10 20:51:46 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 33.3ms | Allocations: 463)
+Completed 200 OK in 92ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 3928)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-05-10 20:51:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (659.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1234.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('1191337073972936730', 0)[0m
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTasks (20210510235530)
+  [1m[35m (618.7ms)[0m  [1m[35mCREATE TABLE `tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `titulo` varchar(255), `status` varchar(255), `descricao` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210510235530')[0m
+  [1m[36mTRANSACTION (126.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-05-10 23:56:27.321170', '2021-05-10 23:56:27.321170')[0m
+  [1m[36mTRANSACTION (79.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('1191337073972936730')[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-05-10 22:45:04 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 359)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 2809)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 22:50:34 -0300
+  
+Zeitwerk::NameError (expected file /home/samuel/Documents/tasksProject/app/controllers/api/v1/tasks_controller.rb to define constant Api::V1::TasksController, but didn't):
+  
+zeitwerk (2.4.2) lib/zeitwerk/loader/callbacks.rb:18:in `on_file_autoloaded'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:27:in `block in require'
+<internal:kernel>:90:in `tap'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `require'
+activesupport (6.1.3.2) lib/active_support/inflector/methods.rb:288:in `const_get'
+activesupport (6.1.3.2) lib/active_support/inflector/methods.rb:288:in `block in constantize'
+activesupport (6.1.3.2) lib/active_support/inflector/methods.rb:284:in `each'
+activesupport (6.1.3.2) lib/active_support/inflector/methods.rb:284:in `inject'
+activesupport (6.1.3.2) lib/active_support/inflector/methods.rb:284:in `constantize'
+activesupport (6.1.3.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.1.3.2) lib/action_dispatch/http/request.rb:93:in `controller_class_for'
+actionpack (6.1.3.2) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (6.1.3.2) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (6.1.3.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.0) lib/puma/configuration.rb:249:in `call'
+puma (5.3.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.3.0) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.3.0) lib/puma/server.rb:437:in `process_client'
+puma (5.3.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 22:51:19 -0300
+Processing by Api::V1::TasksController#index as */*
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2618)
+
+
+  
+NameError (undefined local variable or method `tasks' for #<Api::V1::TasksController:0x00000000007cb0>
+Did you mean?  @tasks):
+  
+app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 22:52:55 -0300
+Processing by Api::V1::TasksController#index as */*
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1385)
+
+
+Started GET "/api/v1/tasks/1" for ::1 at 2021-05-10 23:00:19 -0300
+Processing by Api::V1::TasksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:11:in `show'
+Completed 404 Not Found in 23ms (ActiveRecord: 9.3ms | Allocations: 3004)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=1):
+  
+app/controllers/api/v1/tasks_controller.rb:11:in `show'
+Started POST "/api/v1/tasks" for ::1 at 2021-05-10 23:13:57 -0300
+Processing by Api::V1::TasksController#create as */*
+  Parameters: {"titulo"=>"criando uma tarefa", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST", "task"=>{"titulo"=>"criando uma tarefa", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST"}}
+[31mUnpermitted parameter: :task[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTask Create (1.0ms)[0m  [1m[32mINSERT INTO `tasks` (`titulo`, `status`, `descricao`, `created_at`, `updated_at`) VALUES ('criando uma tarefa', 'aberta', 'criar uma nova tarefa usando REST', '2021-05-11 02:13:57.320082', '2021-05-11 02:13:57.320082')[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (80.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+Completed 200 OK in 106ms (Views: 0.9ms | ActiveRecord: 82.2ms | Allocations: 5483)
+
+
+Started POST "/api/v1/tasks" for ::1 at 2021-05-10 23:16:12 -0300
+Processing by Api::V1::TasksController#create as */*
+  Parameters: {"titulo"=>"testar a funcionalidade de busca", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a busca por id e buscar todas", "task"=>{"titulo"=>"testar a funcionalidade de busca", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a busca por id e buscar todas"}}
+[31mUnpermitted parameter: :task[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTask Create (2.3ms)[0m  [1m[32mINSERT INTO `tasks` (`titulo`, `status`, `descricao`, `created_at`, `updated_at`) VALUES ('testar a funcionalidade de busca', 'aberta', 'criar uma nova tarefa usando REST e verificar se funciona a busca por id e buscar todas', '2021-05-11 02:16:12.362253', '2021-05-11 02:16:12.362253')[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (128.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+Completed 200 OK in 141ms (Views: 0.6ms | ActiveRecord: 130.7ms | Allocations: 1874)
+
+
+Started GET "/api/v1/tasks/1" for ::1 at 2021-05-10 23:16:42 -0300
+Processing by Api::V1::TasksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:11:in `show'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 847)
+
+
+Started GET "/api/v1/tasks/2" for ::1 at 2021-05-10 23:16:48 -0300
+Processing by Api::V1::TasksController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 626)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 23:16:52 -0300
+Processing by Api::V1::TasksController#index as */*
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 926)
+
+
+Started POST "/api/v1/tasks" for ::1 at 2021-05-10 23:19:37 -0300
+Processing by Api::V1::TasksController#create as */*
+  Parameters: {"titulo"=>"testar a funcionalidade de deletar", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a função de apagar", "task"=>{"titulo"=>"testar a funcionalidade de deletar", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a função de apagar"}}
+[31mUnpermitted parameter: :task[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO `tasks` (`titulo`, `status`, `descricao`, `created_at`, `updated_at`) VALUES ('testar a funcionalidade de deletar', 'aberta', 'criar uma nova tarefa usando REST e verificar se funciona a função de apagar', '2021-05-11 02:19:37.824134', '2021-05-11 02:19:37.824134')[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (132.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+Completed 200 OK in 156ms (Views: 0.9ms | ActiveRecord: 139.7ms | Allocations: 4412)
+
+
+Started DELETE "/api/v1/tasks/3" for ::1 at 2021-05-10 23:19:58 -0300
+Processing by Api::V1::TasksController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:29:in `destroy'
+  [1m[36mTask Destroy (0.9ms)[0m  [1m[31mDELETE FROM `tasks` WHERE `tasks`.`id` = 3[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (138.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:29:in `destroy'
+Completed 200 OK in 153ms (Views: 0.7ms | ActiveRecord: 140.8ms | Allocations: 2242)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 23:20:31 -0300
+Processing by Api::V1::TasksController#index as */*
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms | Allocations: 927)
+
+
+Started POST "/api/v1/tasks" for ::1 at 2021-05-10 23:23:36 -0300
+Processing by Api::V1::TasksController#create as */*
+  Parameters: {"titulo"=>"testar a funcionalidade de atualizar", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a função de atualizar", "task"=>{"titulo"=>"testar a funcionalidade de atualizar", "status"=>"aberta", "descricao"=>"criar uma nova tarefa usando REST e verificar se funciona a função de atualizar"}}
+[31mUnpermitted parameter: :task[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTask Create (0.9ms)[0m  [1m[32mINSERT INTO `tasks` (`titulo`, `status`, `descricao`, `created_at`, `updated_at`) VALUES ('testar a funcionalidade de atualizar', 'aberta', 'criar uma nova tarefa usando REST e verificar se funciona a função de atualizar', '2021-05-11 02:23:36.856350', '2021-05-11 02:23:36.856350')[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (194.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:18:in `create'
+Completed 200 OK in 218ms (Views: 1.0ms | ActiveRecord: 203.3ms | Allocations: 4380)
+
+
+Started PUT "/api/v1/tasks/1" for ::1 at 2021-05-10 23:26:22 -0300
+Processing by Api::V1::TasksController#update as */*
+  Parameters: {"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST", "id"=>"1", "task"=>{"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST"}}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:35:in `update'
+[31mUnpermitted parameters: :id, :task[0m
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.8ms | Allocations: 3115)
+
+
+  
+NoMethodError (undefined method `update_attributes' for #<Task id: 1, titulo: "criando uma tarefa", status: "aberta", descricao: "criar uma nova tarefa usando REST", created_at: "2021-05-11 02:13:57.320082000 +0000", updated_at: "2021-05-11 02:13:57.320082000 +0000">
+Did you mean?  update_attribute):
+  
+app/controllers/api/v1/tasks_controller.rb:36:in `update'
+Started PUT "/api/v1/tasks/1" for ::1 at 2021-05-10 23:27:33 -0300
+Processing by Api::V1::TasksController#update as */*
+  Parameters: {"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST", "id"=>"1", "task"=>{"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST"}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:35:in `update'
+[31mUnpermitted parameters: :id, :task[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 8.0ms | Allocations: 3178)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/tasks_controller.rb:36:in `update'
+Started PUT "/api/v1/tasks/1" for ::1 at 2021-05-10 23:28:59 -0300
+Processing by Api::V1::TasksController#update as */*
+  Parameters: {"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST", "id"=>"1", "task"=>{"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST"}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:35:in `update'
+[31mUnpermitted parameters: :id, :task[0m
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 7.9ms | Allocations: 5416)
+
+
+  
+NoMethodError (undefined method `update_attributes' for #<Task id: 1, titulo: "criando uma tarefa", status: "aberta", descricao: "criar uma nova tarefa usando REST", created_at: "2021-05-11 02:13:57.320082000 +0000", updated_at: "2021-05-11 02:13:57.320082000 +0000">
+Did you mean?  update_attribute):
+  
+app/controllers/api/v1/tasks_controller.rb:36:in `update'
+Started GET "/" for ::1 at 2021-05-10 23:29:13 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.8ms | Allocations: 186)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 844)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 23:29:26 -0300
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 1077)
+
+
+Started PUT "/api/v1/tasks/1" for ::1 at 2021-05-10 23:34:43 -0300
+Processing by Api::V1::TasksController#update as */*
+  Parameters: {"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST", "id"=>"1", "task"=>{"titulo"=>"criando uma tarefa", "status"=>"finalizada", "descricao"=>"criar uma nova tarefa usando REST"}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:35:in `update'
+[31mUnpermitted parameters: :id, :task[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTask Update (0.9ms)[0m  [1m[33mUPDATE `tasks` SET `tasks`.`status` = 'finalizada', `tasks`.`updated_at` = '2021-05-11 02:34:43.889171' WHERE `tasks`.`id` = 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (87.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+Completed 200 OK in 168ms (Views: 16.1ms | ActiveRecord: 95.8ms | Allocations: 5156)
+
+
+Started PUT "/api/v1/tasks/4" for ::1 at 2021-05-10 23:36:05 -0300
+Processing by Api::V1::TasksController#update as */*
+  Parameters: {"titulo"=>"testar a funcionalidade de atualizar", "status"=>"em andamento", "descricao"=>"verificar se funciona a função de atualizar", "id"=>"4", "task"=>{"titulo"=>"testar a funcionalidade de atualizar", "status"=>"em andamento", "descricao"=>"verificar se funciona a função de atualizar"}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:35:in `update'
+[31mUnpermitted parameters: :id, :task[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTask Update (0.9ms)[0m  [1m[33mUPDATE `tasks` SET `tasks`.`status` = 'em andamento', `tasks`.`descricao` = 'verificar se funciona a função de atualizar', `tasks`.`updated_at` = '2021-05-11 02:36:05.179628' WHERE `tasks`.`id` = 4[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (71.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:36:in `update'
+Completed 200 OK in 120ms (Views: 0.8ms | ActiveRecord: 74.4ms | Allocations: 2366)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-10 23:36:09 -0300
+Processing by Api::V1::TasksController#index as */*
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 1030)
+
+
+Started GET "/" for ::1 at 2021-05-11 19:04:15 -0300
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 28.9ms | Allocations: 359)
+Completed 200 OK in 194ms (Views: 151.4ms | ActiveRecord: 0.0ms | Allocations: 2809)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-05-11 19:04:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-05-11 20:07:36 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:09:27 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:13:36 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 106)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:15:40 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.9ms | Allocations: 190)
+Completed 200 OK in 28ms (Views: 10.8ms | Allocations: 1882)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:15:44 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.4ms | Allocations: 181)
+Completed 200 OK in 30ms (Views: 28.4ms | Allocations: 1068)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:16:26 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:21:05 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (Allocations: 67)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:21:06 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:21:06 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:21:09 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 66)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:31 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:31 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:23:31 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:18 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 66)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:18 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:18 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:18 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:32 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:24:54 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 18ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:27:17 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:27:19 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:27:19 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:27:20 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:29:04 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:40:27 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 66)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:27 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 29)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 28)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:28 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:29 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:30 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 4ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:31 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:45 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:40:50 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 4ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:41:19 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:41:20 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 20:42:27 -0300
+  
+SyntaxError (/home/samuel/Documents/tasksProject/app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/favicon.ico" for ::1 at 2021-05-11 20:42:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/task" for ::1 at 2021-05-11 20:42:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/task"):
+  
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 20:42:37 -0300
+  
+SyntaxError (/home/samuel/Documents/tasksProject/app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/tasks_controller.rb:70: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 20:44:38 -0300
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (7.3ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:17:in `index'
+Completed 200 OK in 73ms (Views: 15.9ms | ActiveRecord: 26.9ms | Allocations: 5422)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:44:42 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 62)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:45:57 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:46:01 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:50:28 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started GET "/tarefas" for ::1 at 2021-05-11 20:50:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tarefas"):
+  
+Started GET "/" for ::1 at 2021-05-11 20:50:42 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:02 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 8ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:04 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:05 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:05 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:06 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:06 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:07 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:53:37 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:54:37 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:58:04 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.0ms | Allocations: 357)
+Completed 200 OK in 36ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 2767)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:58:21 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/" for ::1 at 2021-05-11 20:58:48 -0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for ::1 at 2021-05-11 20:59:35 -0300
+Processing by HomeController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/" for ::1 at 2021-05-11 21:23:54 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 21:23:59 -0300
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:17:in `index'
+Completed 200 OK in 40ms (Views: 26.3ms | ActiveRecord: 7.0ms | Allocations: 5383)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 21:25:06 -0300
+Processing by Api::V1::TasksController#index as HTML
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 595)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 21:25:57 -0300
+Processing by Api::V1::TasksController#index as HTML
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 549)
+
+
+Started GET "/api/v1/tasks" for ::1 at 2021-05-11 21:33:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tasks"):
+  
+Started GET "/tasks" for ::1 at 2021-05-11 21:33:10 -0300
+  
+SyntaxError (/home/samuel/Documents/tasksProject/app/controllers/tasks_controller.rb:68: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/tasks_controller.rb:68: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/tasks_controller.rb:68: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/tasks" for ::1 at 2021-05-11 21:33:48 -0300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `index'
+Completed 200 OK in 53ms (Views: 37.9ms | ActiveRecord: 9.3ms | Allocations: 5174)
+
+
+Started GET "/tasks" for ::1 at 2021-05-11 21:34:12 -0300
+Processing by TasksController#index as HTML
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/" for ::1 at 2021-05-13 12:57:27 -0300
+  [1m[35m (24.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 35.2ms | Allocations: 359)
+Completed 200 OK in 128ms (Views: 84.9ms | ActiveRecord: 0.0ms | Allocations: 2804)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-05-13 12:57:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/tasks" for ::1 at 2021-05-13 12:57:34 -0300
+Processing by Api::V1::TasksController#index as HTML
+  [1m[36mTask Load (21.4ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:7:in `index'
+Completed 200 OK in 75ms (Views: 24.2ms | ActiveRecord: 28.5ms | Allocations: 5396)
+
+
+Started GET "/api/v1/task/1" for ::1 at 2021-05-13 12:57:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/task/1"):
+  
+Started GET "/api/v1/tasks/1" for ::1 at 2021-05-13 12:57:59 -0300
+Processing by Api::V1::TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (41.0ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tasks_controller.rb:12:in `show'
+Completed 200 OK in 94ms (Views: 0.8ms | ActiveRecord: 41.0ms | Allocations: 2193)
+
+
